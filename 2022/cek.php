@@ -5,15 +5,13 @@ if (isset($_POST['cek'])) {
     $npm = $_POST['npm'];
     $query = "SELECT * FROM asisten_dosen WHERE npm = '$npm'";
     $result = query($query);
-    if (!$result) {
-        echo "NPM $npm tidak ditemukan";
-        $hasil = "Mohon Maaf!";
+    if ($result) {
+        header("Location: success");
     } else {
-        echo "NPM $npm ditemukan";
-        $hasil = "Selamat anda diterima!";
+        header("Location: fail");
     }
 } else {
-    echo "Silahkan isi NPM";
+    header("Location: index");;
 }
 
 ?>

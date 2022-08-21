@@ -1,0 +1,9 @@
+body {
+    font-family: 'Poppins', sans-serif !important;
+    height: 100vh;
+}
+
+.card-npm {
+    background-color: #000000;
+    color: white;
+}
